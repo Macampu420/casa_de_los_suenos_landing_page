@@ -12,7 +12,7 @@ const BotonPendon = ({ imageSource, onClick }) => {
           rounded-5
           '
       >
-        <img className='botonPendon w-100 rounded-3 shadow-lg' src={`./images/${imageSource}`} alt=""/>
+        <img className='botonPendon w-100 rounded-3 shadow-lg' src={`./images/botones_memoria/${imageSource}`} alt=""/>
         </div>
 
     </>

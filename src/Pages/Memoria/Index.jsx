@@ -6,14 +6,14 @@ const MemoriaPage = () => {
   const [sourceImgModalSeleccionado, setSourceImgMetmodalSeleccionado] = useState('')
   const refModalPendon = useRef(null)
   const [totalPendones, setTotalPendones] = useState([
-    'ALIMENTOS.png',
-    'CAPIRO.png',
-    'LIMPIEZA_SOCIAL.png',
-    'VIAJE_EN_CHIVA.png',
-    'RESISTENCIA.png',
-    'PERRILLO.png',
-    'PINERA.png',
-    'QUIEBRA.png'
+    { nombreImgBoton: 'ALIMENTOS.png', nombreImgModal: 'argelia.png' },
+    { nombreImgBoton: 'CAPIRO.png', nombreImgModal: 'capiro .png' },
+    { nombreImgBoton: 'LIMPIEZA_SOCIAL.png', nombreImgModal: 'huracan.png' },
+    { nombreImgBoton: 'VIAJE_EN_CHIVA.png', nombreImgModal: 'chiva.png' },
+    { nombreImgBoton: 'RESISTENCIA.png', nombreImgModal: 'manos.png' },
+    { nombreImgBoton: 'PERRILLO.png', nombreImgModal: 'perrillo.png' },
+    { nombreImgBoton: 'PINERA.png', nombreImgModal: 'pinera.png' },
+    { nombreImgBoton: 'QUIEBRA.png', nombreImgModal: 'quiebra.png' }
   ])
 
   useEffect(() => {
@@ -44,7 +44,6 @@ const MemoriaPage = () => {
     }
   }, [])
 
-  // funcion que desordena un array
   const shuffleArray = array => {
     let currentIndex = array.length
     let temporaryValue
@@ -66,6 +65,7 @@ const MemoriaPage = () => {
     const modalContent = refModalPendon.current
     const modal = new Modal(modalContent)
     setSourceImgMetmodalSeleccionado(rutaImagen)
+    modalContent.addEventListener('hidden.bs.modal', () => setSourceImgMetmodalSeleccionado(''))
     modal.show()
   }
 
@@ -95,7 +95,7 @@ const MemoriaPage = () => {
           marginBottom: '1rem',
           justifyContent: 'center'
         }}>
-          <BotonPendon key={'botonPDF'} imageSource={'PDF_DESCARGAR.png'} onClick={() => {}} />
+          <BotonPendon key={'botonPDF'} imageSource={'PDF_DESCARGAR.png'} onClick={() => { }} />
         </a>
         <article className="col-12 row row-cols-1 row-cols-md-2 mx-auto g-3"
           style={{
@@ -105,14 +105,14 @@ const MemoriaPage = () => {
         >
           {
             totalPendones.map((pendon, index) => (
-              <BotonPendon key={index} imageSource={pendon} onClick={() => handleClickBotonPendon(pendon)} />
+              <BotonPendon key={index} imageSource={pendon.nombreImgBoton} onClick={() => handleClickBotonPendon(pendon.nombreImgModal)} />
             ))
           }
         </article>
 
         <div ref={refModalPendon} id="modalPendon" className="modal fade" tabIndex="-1">
           <div className="modal-dialog modal-xl modalContainerImage">
-            <img src={`./images/${sourceImgModalSeleccionado}`} alt="" className="modalImage" />
+            <img src={`./images/modales_memoria/${sourceImgModalSeleccionado}`} alt="" className="modalImage" />
           </div>
         </div>
       </main>
