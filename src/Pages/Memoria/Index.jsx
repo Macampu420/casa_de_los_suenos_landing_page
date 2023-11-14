@@ -6,14 +6,14 @@ const MemoriaPage = () => {
   const [sourceImgModalSeleccionado, setSourceImgMetmodalSeleccionado] = useState('')
   const refModalPendon = useRef(null)
   const [totalPendones, setTotalPendones] = useState([
-    { nombreImgBoton: 'ALIMENTOS.png', nombreImgModal: 'argelia.png' },
-    { nombreImgBoton: 'CAPIRO.png', nombreImgModal: 'capiro .png' },
-    { nombreImgBoton: 'LIMPIEZA_SOCIAL.png', nombreImgModal: 'huracan.png' },
-    { nombreImgBoton: 'VIAJE_EN_CHIVA.png', nombreImgModal: 'chiva.png' },
-    { nombreImgBoton: 'RESISTENCIA.png', nombreImgModal: 'manos.png' },
-    { nombreImgBoton: 'PERRILLO.png', nombreImgModal: 'perrillo.png' },
-    { nombreImgBoton: 'PINERA.png', nombreImgModal: 'pinera.png' },
-    { nombreImgBoton: 'QUIEBRA.png', nombreImgModal: 'quiebra.png' }
+    { nombreImgBoton: 'alimentos.gif', nombreImgModal: 'alimento.gif' },
+    { nombreImgBoton: 'capiro.gif', nombreImgModal: 'capiro.gif' },
+    { nombreImgBoton: 'huracan.gif', nombreImgModal: 'huracan.gif' },
+    { nombreImgBoton: 'chiva.gif', nombreImgModal: 'chiva.gif' },
+    { nombreImgBoton: 'resistencia.gif', nombreImgModal: 'manos.gif' },
+    { nombreImgBoton: 'perrillo.gif', nombreImgModal: 'perrillo.gif' },
+    { nombreImgBoton: 'pinera.gif', nombreImgModal: 'pinera.gif' },
+    { nombreImgBoton: 'quiebra.gif', nombreImgModal: 'quiebra.gif' }
   ])
 
   useEffect(() => {
@@ -95,7 +95,7 @@ const MemoriaPage = () => {
           marginBottom: '1rem',
           justifyContent: 'center'
         }}>
-          <BotonPendon key={'botonPDF'} imageSource={'PDF_DESCARGAR.png'} onClick={() => { }} />
+          <BotonPendon key={'botonPDF'} imageSource={'PDF_DESCARGAR.gif'} onClick={() => { }} />
         </a>
         <article className="col-12 row row-cols-1 row-cols-md-2 mx-auto g-3"
           style={{
