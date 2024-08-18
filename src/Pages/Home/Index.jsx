@@ -17,8 +17,8 @@ const HomePage = () => {
               <FaFacebook size={40} color="#c23b31" />
             </a>
         </Flex>
-        <Text textAlign={'center'}>O puedes echarle un vistazo a nuestro proyecto de memoria haciendo click
-          <a href="/memoria" target="_blank" rel="noreferrer"> aquí</a>
+        <Text textAlign={'center'}>O puedes echarle un vistazo a nuestro proyecto de memoria
+           haciendo click <a href="https://casadelosuenos.netlify.app/" target="_blank" rel="noreferrer">aquí</a>
         </Text>
     </Flex>
 
